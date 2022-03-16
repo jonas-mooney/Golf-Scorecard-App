@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 1em;
+  background-color: rgb(175, 247, 175);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .form-group {
+    width: 200px;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+    label {
+      font-size: 2em;
+    }
+
+    #course-images {
+      width: 16em;
+      height: 42em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+      .imageAndGroup {
+        background-color: antiquewhite;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 5px solid antiquewhite;
+        
+        #course-image {
+          width: 14em;
+        }
+      }
+      
+
+    }
+  }
+
+
+
+
+
+
+}

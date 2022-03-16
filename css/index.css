@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 1em;
+  background-color: #aff7af;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .form-group {
+  width: 200px;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .form-group label {
+  font-size: 2em;
+}
+body .form-group #course-images {
+  width: 16em;
+  height: 42em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+body .form-group #course-images .imageAndGroup {
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid antiquewhite;
+}
+body .form-group #course-images .imageAndGroup #course-image {
+  width: 14em;
+}
+
+/*# sourceMappingURL=index.css.map */
