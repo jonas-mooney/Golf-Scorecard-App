@@ -24,13 +24,18 @@ body {
 }
 body .form-group {
   width: 100vw;
-  margin-top: 2em;
+  margin-top: 8em;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 body .form-group h1 {
   font-size: 5em;
+}
+@media only screen and (max-width: 530px) {
+  body .form-group h1 {
+    font-size: 3em;
+  }
 }
 body .form-group label {
   font-size: 2em;
@@ -40,24 +45,32 @@ body .form-group #course-images {
   height: 30em;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-around;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 906px) {
   body .form-group #course-images {
     flex-direction: column;
     justify-content: flex-start;
+    width: 30em;
   }
 }
-body .form-group #course-images .imageAndGroup {
-  background-color: antiquewhite;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 5px solid antiquewhite;
+@media only screen and (max-width: 530px) {
+  body .form-group #course-images {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 20em;
+  }
 }
-body .form-group #course-images .imageAndGroup #course-image {
-  height: 12em;
+body .form-group #course-images .card {
+  margin: 5px;
+}
+body .form-group #course-images .card img {
+  height: 210px;
+}
+body .form-group #course-images .card .card-footer {
+  display: flex;
+  justify-content: center;
 }
 body .form-group #begin {
   width: 250px;
