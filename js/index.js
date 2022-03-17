@@ -1,9 +1,6 @@
-// const { json } = require("express/lib/response");
+import { buildCourses } from "./render.mjs";
 
 let myCourses = [];
-let selectedCourse;
-let count = 0;
-let teeType;
 
 getApi();
 
@@ -12,34 +9,19 @@ function getApi() {
   .then(response => response.json())
   .then(data => myCourses = data)
   .then(() => {
-    buildCourses();
+    buildCourses(myCourses);
     chooseCourse();
   });
 }
-// The data is not available until you open a .then statement or call within a seperate function.
 
-
-function buildCourses() {
-  let courseOptionsHTML = '';
-  let courseImages = '';
-  myCourses.courses.forEach((course) => {
-    courseOptionsHTML += `<option id='${course.id}' value='${course.id}'>${course.name}</option>`;
-    courseImages += `<div class='imageAndGroup'><h4>${course.name}</h4><img id='course-image' src='${course.image}'></div>`
-  })
-  document.querySelector('#course-select').innerHTML = courseOptionsHTML;
-  document.querySelector('#course-images').innerHTML = courseImages;
-}
-
-// form-id
-// course-select
-
-chooseCourse();
 function chooseCourse() {
   // let courseSelected = document.querySelector('#course-select').selected;
   let courseSelected = document.querySelector('#course-select');
-  let form = document.querySelector('#formId');
-  let chosenCourse = form-id.course-select;
+  // let chosenCourse = formId.courseSelect[formId.courseSelect.selectedIndex].text;
   // console.log(chosenCourse);
+  // console.log(formId)
+  // console.log(document.querySelector('#courseSelect').value)
+  // parent selector
 
   // console.log(courseSelected)
 
@@ -47,16 +29,8 @@ function chooseCourse() {
   // let thankButton = document.querySelector('#11819');
   // let spanishButton = document.querySelector('#19002');
 
-  // Selecting parent value
 }
 
-// foxButton.addEventListener('click', selectCourse(this.id))
-// function selectCourse(id) {
-//   console.log(id);
-// }
-
-
-// fetch('https://reqres.in/api/users')
-// .then(res => res.json())
-// .then(data => console.log(data));
-
+function chooseCourse2(courseId) {
+  console.log(courseId);
+}

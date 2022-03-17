@@ -6,29 +6,48 @@
 
 body {
   width: 100vw;
-  height: 1em;
-  background-color: #aff7af;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+  background-image: url("./images/golfCourseImage2..jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media only screen and (max-width: 400px) {
+  body {
+    background-color: #80C75E;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }
 body .form-group {
-  width: 200px;
+  width: 100vw;
   margin-top: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+body .form-group h1 {
+  font-size: 5em;
+}
 body .form-group label {
   font-size: 2em;
 }
 body .form-group #course-images {
-  width: 16em;
-  height: 42em;
+  width: 56em;
+  height: 30em;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-around;
+}
+@media only screen and (max-width: 400px) {
+  body .form-group #course-images {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }
 body .form-group #course-images .imageAndGroup {
   background-color: antiquewhite;
@@ -38,7 +57,14 @@ body .form-group #course-images .imageAndGroup {
   border: 5px solid antiquewhite;
 }
 body .form-group #course-images .imageAndGroup #course-image {
-  width: 14em;
+  height: 12em;
+}
+body .form-group #begin {
+  width: 250px;
+  height: 100px;
+  border-radius: 12px;
+  background-color: bisque;
+  font-size: 30px;
 }
 
 /*# sourceMappingURL=index.css.map */
